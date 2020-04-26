@@ -2,7 +2,7 @@
 
 
 <ul>
-  <li *ngFor="let product of products" (click)="selectedProduct(product)">
+  <li *ngFor="let product of products" (click)="selectProduct(product)">
     <div>
       <h3>
         <a [title]="product.name + ' details'">
@@ -18,25 +18,10 @@
         Options
       </button>
       <div *ngIf = "!isOptionsToggle">
-          <div *ngFor="let prodmod of product.prodmods">
+          <div *ngFor="let prodmod of selectedProduct.prodmods">
               {{ prodmod.name }  
           </div>
       </div>
     </div>
   </li>
 </ul>
-
-
-
-
-
-<!-- <p><i>Pick a hero from the list</i></p>
-<ul>
-  <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
-    {{hero.name}}
-  </li>
-</ul>
-
-<app-hero-detail *ngIf="selectedHero" [hero]="selectedHero"></app-hero-detail> -->
-
-

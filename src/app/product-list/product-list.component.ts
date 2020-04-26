@@ -11,8 +11,9 @@ import { products } from '../products';
 
 export class ProductListComponent {
   products = products;
-  selectedProduct: product;
+  selectedProduct;
   isOptionsToggle = false;
+
   share() {
     window.alert('The product has been shared!');
   }
@@ -25,5 +26,8 @@ export class ProductListComponent {
     this.isOptionsToggle = !this.isOptionsToggle;
   }
   
+  selectProduct(product) {
+    this.selectedProduct = product;
+  }
 
 }
