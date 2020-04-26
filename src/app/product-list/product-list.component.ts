@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 
 import { products } from '../products';
+import { MenuService } from '../menu-service';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  styleUrls: ['./product-list.component.css'],
+  providers:  [ MenuService ]
 })
 
 export class ProductListComponent {
@@ -13,7 +15,16 @@ export class ProductListComponent {
   selectedProduct;
 
   cart = [];
+
+  constructor(private service: MenuService) {
+
+  }
  
+ 
+  ngOnInit() {
+//get ? menu
+  }
+
   checkout() {
 
     for (let i = 0; i < products.length; i++) {
