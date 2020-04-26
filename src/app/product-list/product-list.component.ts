@@ -14,11 +14,23 @@ export class ProductListComponent {
 
   cart = [];
  
-  addToCart(product) {
-    this.cart.push(product);
-    this.selectedProduct = product;
+  checkout() {
 
-    window.alert(product.quantity);
+    cart = [];
+
+    for (let i = 0; i < products.length; i++) {
+
+      if(products[i].quantity > 0) {
+          console.log(products[i].name);
+          this.cart.push(product);
+      }
+
+
+    }
+
+    if(cart.lngth > 0) {
+      window.alert("Checkout submitted");
+    }
   }
 
 }
