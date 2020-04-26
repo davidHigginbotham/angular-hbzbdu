@@ -13,8 +13,8 @@ export const products = [
     {
       name : "prod mod 2",
       quantity : 0,
-      price: 699,
-    
+      price: 699
+    }
     ],
     quantity : 0
   },
