@@ -22,8 +22,14 @@ export class ProductComponent implements OnInit {
     this.isOptionsToggle = !this.isOptionsToggle;
   }
 
-  changeQuantity (quantity) {
-    this.product.quantity = quantity;
+  addQuantity () {
+    this.product.quantity = this.product.quantity + 1;
+  };
+
+  subtractQuantity () {
+    if(this.product.quantity.length > 0) {
+        this.product.quantity = this.product.quantity - 1;
+    }
   };
 
 }

@@ -8,8 +8,12 @@
 
   </h3>
 
-  <input type="number" placeholder="quantity" (change)="changeQuantity($event.target.value)">
+  <a class="button fancy-button" (click)="addQuantity()">+</a>
 
+  <input type="number" placeholder="{{product.quantity}}" disabled>
+  
+  <a class="button fancy-button" (click)="substractQuantity()">-</a>
+ 
   <p *ngIf="product.description">
     Description: {{ product.description }}
   </p>
