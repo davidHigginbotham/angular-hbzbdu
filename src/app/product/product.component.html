@@ -1,17 +1,18 @@
 <div>
-      <h3>
-        <a [title]="product.name + ' details'">
-              {{ product.name }}
-        </a>
-      </h3>
-<p> {{ product.name }} </p>
-      <p *ngIf="product.description">
-        Description: {{ product.description }}
-      </p>
 
-      <button (click)="notify.emit()">Add to Cart</button>
+  <h3>
 
-      <input type="number" placeholder="quantity" (change)="changeQuantity($event.target.value)">
+  <a [title]="product.name + ' details'">
+    {{ product.name }}
+  </a>
+
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <input type="number" placeholder="quantity" (change)="changeQuantity($event.target.value)">
 
       <!-- <button (click) = "toggleOptions()">
         Options
