@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 
 import { products } from '../products';
 
-
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -12,13 +11,11 @@ import { products } from '../products';
 export class ProductListComponent {
   products = products;
   selectedProduct;
-  isOptionsToggle = false;
 
- toggleOptions() {
-    this.isOptionsToggle = !this.isOptionsToggle;
-  }
-  
-  selectProduct(product) {
+  cart = [];
+ 
+  addToCart(product) {
+    this.cart.push(product);
     this.selectedProduct = product;
   }
 

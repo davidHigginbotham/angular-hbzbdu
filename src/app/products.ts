@@ -5,12 +5,15 @@ export const products = [
     description: 'A large phone with one of the best screens',
     prodmods : [
     {
-      name :"prod mod 1"
+      name :"prod mod 1",
+      quantity : 0
     },
     {
-      name : "prod mod 2"
+      name : "prod mod 2",
+      quantity : 0
     }
-    ]
+    ],
+    quantity : 0
   },
   {
     name: 'Phone Mini',
@@ -18,12 +21,15 @@ export const products = [
     description: 'A great phone with one of the best cameras',
     prodmods : [
     {
-      name :"prod mod 3"
+      name :"prod mod 3",
+      quantity : 0
     },
     {
-      name : "prod mod 4"
+      name : "prod mod 4",
+      quantity : 0
     }
-    ]
+    ],
+    quantity : 0
   },
   {
     name: 'Phone Standard',
@@ -31,11 +37,14 @@ export const products = [
     description: '',
     prodmods : [
     {
-      name :"prod mod 5"
+      name :"prod mod 5",
+      quantity : 0
     },
     {
-      name : "prod mod 6"
+      name : "prod mod 6",
+      quantity : 0
     }
-    ]
+    ],
+    quantity : 0
   }
 ];

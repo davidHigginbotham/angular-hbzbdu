@@ -2,25 +2,11 @@
 
 <ul>
   <li *ngFor="let product of products" (click)="selectProduct(product)">
-    <div>
-      <h3>
-        <a [title]="product.name + ' details'">
-              {{ product.name }     
-        </a>
-      </h3>
 
-      <p *ngIf="product.description">
-        Description: {{ product.description }}
-      </p>
+    <app-product
+        [product]="product"
+        (notify)="addToCart(product)">
+    </app-product>
 
-      <button (click) = "toggleOptions()">
-        Options
-      </button>
-      <div *ngIf = "!isOptionsToggle">
-          <div *ngFor="let prodmod of selectedProduct.prodmods">
-              {{ prodmod.name }  
-          </div>
-      </div>
-    </div>
   </li>
 </ul>
