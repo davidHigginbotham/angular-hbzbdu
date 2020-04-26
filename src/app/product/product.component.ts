@@ -24,7 +24,6 @@ export class ProductComponent implements OnInit {
 
   changeQuantity (quantity) {
     this.product.quantity = quantity;
-    window.alert(this.product.quantity);
   };
 
 }
