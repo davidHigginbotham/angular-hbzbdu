@@ -11,6 +11,8 @@
 
       <button (click)="notify.emit()">Add to Cart</button>
 
+      <input type="number" placeholder="quantity" (change)="changeQuantity($event.target.value)">
+
       <!-- <button (click) = "toggleOptions()">
         Options
       </button>

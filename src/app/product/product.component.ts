@@ -15,11 +15,16 @@ export class ProductComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    isOptionsToggle = false;
+    this.isOptionsToggle = false;
   }
 
   toggleOptions() {
     this.isOptionsToggle = !this.isOptionsToggle;
   }
+
+  changeQuantity (quantity) {
+    this.product.quantity = quantity;
+    window.alert(this.product.quantity);
+  };
 
 }

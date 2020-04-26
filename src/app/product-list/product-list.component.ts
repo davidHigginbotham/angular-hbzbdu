@@ -17,6 +17,8 @@ export class ProductListComponent {
   addToCart(product) {
     this.cart.push(product);
     this.selectedProduct = product;
+
+    window.alert(product.quantity);
   }
 
 }
