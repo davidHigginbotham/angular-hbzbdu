@@ -19,6 +19,7 @@ export class ProductListComponent {
     for (let i = 0; i < products.length; i++) {
 
       if(products[i].quantity > 0) {
+          window.alert(products[i].quantity);
           console.log(products[i].name);
           this.cart.push(products[i]);
       }

@@ -24,10 +24,16 @@ export class ProductComponent implements OnInit {
 
   addQuantity () {
     this.product.quantity = this.product.quantity + 1;
+    window.alert("added");
+     window.alert(this.product.quantity);
   };
 
   subtractQuantity () {
+    window.alert("subtractQuantity");
+    window.alert(this.product.quantity);
     if(this.product.quantity.length > 0) {
+      window.alert("substracted");
+      window.alert(this.product.quantity);
         this.product.quantity = this.product.quantity - 1;
     }
   };
