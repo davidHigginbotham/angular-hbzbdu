@@ -1,6 +1,42 @@
 <h2>Products</h2>
 
-<div *ngFor="let product of products">
-  <app-product [product]="product">
-  </app-product>
-</div>
+
+<ul>
+  <li *ngFor="let product of products" (click)="selectedProduct(product)">
+    <div>
+      <h3>
+        <a [title]="product.name + ' details'">
+              {{ product.name }     
+        </a>
+      </h3>
+
+      <p *ngIf="product.description">
+        Description: {{ product.description }}
+      </p>
+
+      <button (click) = "toggleOptions()">
+        Options
+      </button>
+      <div *ngIf = "!isOptionsToggle">
+          <div *ngFor="let prodmod of product.prodmods">
+              {{ prodmod.name }  
+          </div>
+      </div>
+    </div>
+  </li>
+</ul>
+
+
+
+
+
+<!-- <p><i>Pick a hero from the list</i></p>
+<ul>
+  <li *ngFor="let hero of heroes" (click)="selectHero(hero)">
+    {{hero.name}}
+  </li>
+</ul>
+
+<app-hero-detail *ngIf="selectedHero" [hero]="selectedHero"></app-hero-detail> -->
+
+
