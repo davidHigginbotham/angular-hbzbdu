@@ -7,12 +7,14 @@ export const products = [
     prodmods : [
     {
       name :"prod mod 1",
-      quantity : 0
+      quantity : 0,
+      price: 699
     },
     {
       name : "prod mod 2",
-      quantity : 0
-    }
+      quantity : 0,
+      price: 699,
+    
     ],
     quantity : 0
   },
@@ -24,11 +26,13 @@ export const products = [
     prodmods : [
     {
       name :"prod mod 3",
-      quantity : 0
+      quantity : 0,
+      price: 699
     },
     {
       name : "prod mod 4",
-      quantity : 0
+      quantity : 0,
+      price: 699
     }
     ],
     quantity : 0
@@ -41,11 +45,13 @@ export const products = [
     prodmods : [
     {
       name :"prod mod 5",
-      quantity : 0
+      quantity : 0,
+      price: 699
     },
     {
       name : "prod mod 6",
-      quantity : 0
+      quantity : 0,
+      price: 699
     }
     ],
     quantity : 0
