@@ -1,24 +1,13 @@
 <h2>Product Details</h2>
 
 <div *ngIf="product">
+
   <h3>{{ product.name }}</h3>
   <h4>{{ product.price | currency }}</h4>
-  <p>{{ product.description }}</p>
 
-</div>
-
-
-
-
-<div ngIf>	
-
-  <h3>	
-
-  <a [title]="product.name + ' details'">	
-    {{ product.name }}	
-  </a>	
-
-  </h3>	
+  <p *ngIf="product.description">	
+    {{ product.description }}	
+  </p>	
 
   <a class="button fancy-button" (click)="addQuantity()">+</a>	
 
@@ -39,5 +28,6 @@
           <div *ngFor="let prodmod of product.prodmods">	
               {{prodmod.name}}  {{prodmod.quantity}}	
           </div>	
-      </div> -->	
-</div> 
+      </div> -->
+
+</div>
