@@ -3,12 +3,11 @@
 <ul>
   <li *ngFor="let product of products" (click)="selectProduct(product)">
 
-    <app-product
-        [product]="product"
-        (notify)="addToCart(product)">
-    </app-product>
+    <app-product-details
+        [product]="product">
+    </app-product-details>
 
   </li>
 </ul>
 
-<a class="button fancy-button" (click)="checkout()"><i class="material-icons">shopping_cart</i>Checkout</a>
+
