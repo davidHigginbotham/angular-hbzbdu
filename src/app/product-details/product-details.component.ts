@@ -23,12 +23,12 @@ export class ProductDetailsComponent implements OnInit {
     private cartService: CartService
   ) { }
 
- ngOnInit() {
+  ngOnInit() {
    this.isOptionsToggle = false;	
-  this.route.paramMap.subscribe(params => {
-    this.product = products[+params.get('productId')];
-  });
-}
+     this.route.paramMap.subscribe(params => {
+     this.product = products[+params.get('productId')];
+   });
+  }
 
   toggleOptions() {	
     this.isOptionsToggle = !this.isOptionsToggle;	
@@ -38,7 +38,7 @@ export class ProductDetailsComponent implements OnInit {
     this.product.quantity = this.product.quantity + 1;	
     window.alert("added");	
      window.alert(this.product.quantity);	
-     this.addToCart(product);
+     this.addToCart();
   };	
 
   subtractQuantity () {	
@@ -50,16 +50,16 @@ export class ProductDetailsComponent implements OnInit {
         this.product.quantity = this.product.quantity - 1;	
     }	
     if(this.product.quantity.length == 0) {
-      this.removeFromCart()
+      this.removeFromCart();
     }	
   };
 
-  addToCart(product) {
-    this.cartService.addToCart(product);
+  addToCart() {
+    this.cartService.addToCart(this.product);
     window.alert('Your product has been added to the cart!');
   }
 
- reomveFromCart(product) {
+ removeFromCart() {
     this.cartService.removeFromCart(product);
     window.alert('Your product has been added to the cart!');
   }
