@@ -38,6 +38,7 @@ export class ProductDetailsComponent implements OnInit {
     this.product.quantity = this.product.quantity + 1;	
     window.alert("added");	
      window.alert(this.product.quantity);	
+     this.addToCart(product);
   };	
 
   subtractQuantity () {	
@@ -48,6 +49,19 @@ export class ProductDetailsComponent implements OnInit {
       window.alert(this.product.quantity);	
         this.product.quantity = this.product.quantity - 1;	
     }	
+    if(this.product.quantity.length == 0) {
+      this.removeFromCart()
+    }	
   };
+
+  addToCart(product) {
+    this.cartService.addToCart(product);
+    window.alert('Your product has been added to the cart!');
+  }
+
+ reomveFromCart(product) {
+    this.cartService.removeFromCart(product);
+    window.alert('Your product has been added to the cart!');
+  }
 
 }

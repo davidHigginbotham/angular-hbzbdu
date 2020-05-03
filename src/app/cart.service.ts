@@ -4,11 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CartService {
-items = [];
+
+  items = [];
   constructor() { }
 
 
-addToCart(product) {
+  addToCart(product) {
     this.items.push(product);
   }
 
@@ -21,8 +22,9 @@ addToCart(product) {
     return this.items;
   }
 
+//passing in object because im not sure the pop will work all the time.
   removeFromCart(product) {
-    this.items.pop()
+    this.items.pop();
   }
-  
+
 }
