@@ -10,6 +10,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 // import { MenuService } from './menu-service';
 // import { LoggerService } from './logger.service';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+import { CartService } from './cart.service';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     ProductDetailsComponent,
   ],
   bootstrap: [ AppComponent ],
+  providers: [CartService],
  // providers: [MenuService, LoggerService]
 })
 export class AppModule { }
