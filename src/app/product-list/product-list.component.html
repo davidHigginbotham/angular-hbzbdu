@@ -1,13 +1,11 @@
 <h2>Products</h2>
 
-<ul>
-  <li *ngFor="let product of products" (click)="selectProduct(product)">
+<div *ngIf="products">
 
-    <app-product-details
-        [product]="product">
-    </app-product-details>
+ <h3>
+    <a [title]="product.name + ' details'" [routerLink]="['/products', productId]">
+      {{ product.name }}
+    </a>
+  </h3>
 
-  </li>
-</ul>
-
-
+</div>

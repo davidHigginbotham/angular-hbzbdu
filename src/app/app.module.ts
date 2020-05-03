@@ -7,9 +7,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
-import { ProductComponent } from './product/product.component';
-import { MenuService } from './menu-service';
-import { LoggerService } from './logger.service';
+// import { MenuService } from './menu-service';
+// import { LoggerService } from './logger.service';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
 
@@ -26,11 +25,10 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    ProductComponent,
     ProductDetailsComponent,
   ],
   bootstrap: [ AppComponent ],
-  providers: [MenuService, LoggerService]
+ // providers: [MenuService, LoggerService]
 })
 export class AppModule { }
 

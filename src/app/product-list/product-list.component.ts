@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 
 import { products } from '../products';
-import { MenuService } from '../menu-service';
+//import { MenuService } from '../menu-service';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
-  providers:  [ MenuService ]
+ // providers:  [ MenuService ]
 })
 
 export class ProductListComponent {
@@ -16,7 +16,8 @@ export class ProductListComponent {
 
   cart = [];
 
-  constructor(private service: MenuService) {
+constructor() {
+  //constructor(private service: MenuService) {
 
   }
  

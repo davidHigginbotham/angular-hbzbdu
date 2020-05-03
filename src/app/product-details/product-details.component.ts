@@ -12,7 +12,7 @@ import { products } from '../products';
 })
 export class ProductDetailsComponent implements OnInit {
 
-   product;
+  @Input() product;
 
   @Output() notify = new EventEmitter();	
   isOptionsToggle = false;	
